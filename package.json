@@ -1,0 +1,16 @@
+{
+  "name": "triangulo",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Projeto node + express criado com o proposito de praticar a implementação de pipelines com o github actions",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}

@@ -1,11 +1,11 @@
 import express from 'express';
 
 const serverPort = 3031;
-const healthCheckPath = "/ready"
+const readyPath = "/ready"
 
 const app = express();
 
-app.get(healthCheckPath, (req, res) => {
+app.get(readyPath, (req, res) => {
     const respondeReady = "SERVER READY AT: " + new Date();
 	res.send(respondeReady);
 });

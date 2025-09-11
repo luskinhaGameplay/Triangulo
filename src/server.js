@@ -6,11 +6,17 @@ const readyPath = "/ready"
 const app = express();
 
 app.get(readyPath, (req, res) => {
-    const respondeReady = "SERVER READY AT: " + new Date();
-	res.send(respondeReady);
+	res.send(
+        {
+            message:"SERVER READY",
+            timeStamp: new Date()
+        }       
+    );
 });
 
 
 app.listen(serverPort, () => {
     console.log(`App listening on ${serverPort}`);
 });
+
+export default app;

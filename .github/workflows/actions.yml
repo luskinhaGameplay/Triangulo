@@ -10,7 +10,7 @@ on:
 env:
   IMAGE_NAME: app-triangulo
   AWS_REGION: us-east-1
-  ECS_TASK_DEFINITION: ./aws/td.json
+  ECS_TASK_DEFINITION: aws/td.json
   CONTAINER_IMAGE: luskinhagameplay/app-triangulo
   CONTAINER_NAME: app-triangulo
   ECS_SERVICE: triangulo-service-rabbit            
@@ -80,6 +80,10 @@ jobs:
       packages: write
       contents: read
     steps:
+    
+      - name: Checkout code
+        uses: actions/checkout@v4
+
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:

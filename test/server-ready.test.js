@@ -1,5 +1,5 @@
 import request from 'supertest';
-import server from '../src/server.js';
+import server from '../src/server-without-tcp';
 
 describe('Test server readiness', () => {
     it('Should get server ready', async ()=>{

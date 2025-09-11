@@ -5,7 +5,7 @@
   "description": "Projeto node + express criado com o proposito de praticar a implementação de pipelines com o github actions",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
+    "test": "jest --detectOpenHandles",
     "start": "node src/server.js",
     "build": "babel src -d dist"
   },

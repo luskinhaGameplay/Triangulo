@@ -13,7 +13,7 @@ env:
   ECS_TASK_DEFINITION: aws/td.json
   CONTAINER_IMAGE: luskinhagameplay/app-triangulo
   CONTAINER_NAME: app-triangulo
-  ECS_SERVICE: triangulo-app-service             
+  ECS_SERVICE: triangulo-service-rabbit            
   ECS_CLUSTER: triangulo-app-rabbit
 
 
@@ -81,7 +81,7 @@ jobs:
       contents: read
     steps:
       - name: Configure AWS credentials
-        uses: aws-actions/configure-aws-credentials@v1
+        uses: aws-actions/configure-aws-credentials@v4
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}

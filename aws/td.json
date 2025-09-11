@@ -1,0 +1,24 @@
+{
+  "family": "td-triangulo",
+  "networkMode": "awsvpc",
+  "containerDefinitions": [
+    {
+      "name": "app-triangulo",
+      "image": "luskinhagameplay/app-triangulo:latest",
+      "essential": true,
+      "cpu": 256,
+      "memory": 512,
+      "portMappings": [
+        {
+          "containerPort": 3031,
+          "hostPort": 3031,
+          "protocol": "tcp"
+        }
+      ]
+    }
+  ],
+  "cpu": "256",
+  "memory": "512",
+  "requiresCompatibilities": ["FARGATE"],
+  "executionRoleArn": "arn:aws:iam::814147156818:role/ecsTaskExecutionRole"
+}

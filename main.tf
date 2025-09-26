@@ -72,7 +72,7 @@ resource "aws_security_group" "ecs_sg" {
 
 # Cluster ECS
 resource "aws_ecs_cluster" "ecs_cluster" {
-  name = "ecs-triangulo-cluster"
+  name = "triangulo-app-cluster-rabbit"
 }
 
 # Task Definition
@@ -106,7 +106,7 @@ DEFINITION
 
 # Service
 resource "aws_ecs_service" "ecs_service" {
-  name            = "ecs-triangulo-service"
+  name            = "triangulo-service-rabbit"
   cluster         = aws_ecs_cluster.ecs_cluster.id
   task_definition = aws_ecs_task_definition.ecs_task.arn
   desired_count   = 1

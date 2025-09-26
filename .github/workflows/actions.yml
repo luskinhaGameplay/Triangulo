@@ -14,7 +14,7 @@ env:
   CONTAINER_IMAGE: luskinhagameplay/app-triangulo
   CONTAINER_NAME: app-triangulo
   ECS_SERVICE: triangulo-service-rabbit            
-  ECS_CLUSTER: triangulo-app-rabbit
+  ECS_CLUSTER: triangulo-app-cluster-rabbit
 
 
 jobs:
